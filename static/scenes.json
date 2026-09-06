@@ -1,0 +1,802 @@
+{
+    "scene1": {
+        "image": "scene1.jpg",
+        "forward": "scene2",
+        "back": "",
+        "left": "",
+        "right": "",
+        "manual": false,
+        "hotspots": [
+            {
+                "pitch": -3.849441875688382,
+                "yaw": -31.76385464944309,
+                "text": "Main gate"
+            },
+            {
+                "pitch": 9.199043953238911,
+                "yaw": 28.570331645799442,
+                "text": "min gatea"
+            }
+        ]
+    },
+    "scene2": {
+        "image": "scene2.jpg",
+        "forward": "scene3",
+        "back": "scene1",
+        "left": "",
+        "right": "",
+        "manual": false,
+        "hotspots": [
+            {
+                "pitch": -5.191205063368033,
+                "yaw": -108.15185689609405,
+                "text": "secuirty room"
+            },
+            {
+                "pitch": 1.2555921648707546,
+                "yaw": 132.0100568802896,
+                "text": "Indian bank"
+            },
+            {
+                "pitch": -2.745375511319369,
+                "yaw": -22.699636168631304,
+                "text": "Parking 1"
+            }
+        ]
+    },
+    "scene3": {
+        "image": "scene3.jpg",
+        "forward": "scene5",
+        "back": "scene2",
+        "left": "scene4",
+        "right": "",
+        "manual": true,
+        "hotspots": [
+            {
+                "pitch": -2.3266429952109258,
+                "yaw": -86.73380327190834,
+                "text": "Parking 1"
+            }
+        ]
+    },
+    "scene4": {
+        "image": "scene4.jpg",
+        "forward": "",
+        "back": "scene3",
+        "left": "",
+        "right": "",
+        "manual": true
+    },
+    "scene5": {
+        "image": "scene5.jpg",
+        "forward": "scene7",
+        "back": "scene3",
+        "left": "scene6",
+        "right": "",
+        "manual": true,
+        "hotspots": [
+            {
+                "pitch": 1.124809099413336,
+                "yaw": -80.5674257431473,
+                "text": "Parking 2"
+            }
+        ]
+    },
+    "scene6": {
+        "image": "scene6.jpg",
+        "forward": "",
+        "back": "scene5",
+        "left": "",
+        "right": "",
+        "manual": true
+    },
+    "scene7": {
+        "image": "scene7.jpg",
+        "forward": "scene10",
+        "back": "scene5",
+        "left": "",
+        "right": "scene8",
+        "manual": true,
+        "hotspots": [
+            {
+                "pitch": 0.0888819792233885,
+                "yaw": 80.61963762767189,
+                "text": "Block 1"
+            }
+        ]
+    },
+    "scene8": {
+        "image": "scene8.jpg",
+        "forward": "scene9",
+        "back": "scene7",
+        "left": "scene7",
+        "right": "",
+        "manual": false
+    },
+    "scene9": {
+        "image": "scene9.jpg",
+        "forward": "",
+        "back": "scene8",
+        "left": "scene21",
+        "right": "",
+        "manual": true
+    },
+    "scene10": {
+        "image": "scene10.jpg",
+        "forward": "scene11",
+        "back": "scene7",
+        "left": "",
+        "right": "",
+        "manual": true
+    },
+    "scene11": {
+        "image": "scene11.jpg",
+        "forward": "scene49",
+        "back": "scene10",
+        "left": "",
+        "right": "scene12",
+        "manual": true
+    },
+    "scene12": {
+        "image": "scene12.jpg",
+        "forward": "scene13",
+        "back": "scene11",
+        "left": "",
+        "right": "",
+        "manual": false,
+        "hotspots": [
+            {
+                "pitch": -0.9218555041435472,
+                "yaw": -46.096335188632324,
+                "text": "Admin block"
+            }
+        ]
+    },
+    "scene13": {
+        "image": "scene13.jpg",
+        "forward": "scene14",
+        "back": "scene12",
+        "left": "",
+        "right": "",
+        "manual": false
+    },
+    "scene14": {
+        "image": "scene14.jpg",
+        "forward": "scene16",
+        "back": "scene13",
+        "left": "scene15",
+        "right": "",
+        "manual": true
+    },
+    "scene15": {
+        "image": "scene15.jpg",
+        "forward": "scene22",
+        "back": "scene14",
+        "left": "",
+        "right": "",
+        "manual": true
+    },
+    "scene16": {
+        "image": "scene16.jpg",
+        "forward": "scene17",
+        "back": "scene15",
+        "left": "",
+        "right": "",
+        "manual": false
+    },
+    "scene17": {
+        "image": "scene17.jpg",
+        "forward": "scene18",
+        "back": "scene16",
+        "left": "",
+        "right": "scene78",
+        "manual": true
+    },
+    "scene18": {
+        "image": "scene18.jpg",
+        "forward": "",
+        "back": "scene17",
+        "left": "",
+        "right": "scene19",
+        "manual": true,
+        "hotspots": [
+            {
+                "pitch": -1.0386660993066252,
+                "yaw": 71.3870306062127,
+                "text": "common library"
+            }
+        ]
+    },
+    "scene19": {
+        "image": "scene19.jpg",
+        "forward": "",
+        "back": "scene18",
+        "left": "scene20",
+        "right": "",
+        "manual": true
+    },
+    "scene20": {
+        "image": "scene20.jpg",
+        "forward": "scene21",
+        "back": "scene19",
+        "left": "",
+        "right": "",
+        "manual": false
+    },
+    "scene21": {
+        "image": "scene21.jpg",
+        "forward": "",
+        "back": "scene9",
+        "left": "",
+        "right": "scene71",
+        "manual": true
+    },
+    "scene22": {
+        "image": "scene22.jpg",
+        "forward": "scene23",
+        "back": "scene15",
+        "left": "",
+        "right": "scene77",
+        "manual": true
+    },
+    "scene23": {
+        "image": "scene23.jpg",
+        "forward": "scene24",
+        "back": "scene22",
+        "left": "",
+        "right": "",
+        "manual": false
+    },
+    "scene24": {
+        "image": "scene24.jpg",
+        "forward": "",
+        "back": "scene23",
+        "left": "",
+        "right": "scene25",
+        "manual": true,
+        "hotspots": [
+            {
+                "pitch": 2.571590834803777,
+                "yaw": 53.402095700491586,
+                "text": "BLOCK 4"
+            }
+        ]
+    },
+    "scene25": {
+        "image": "scene25.jpg",
+        "forward": "scene26",
+        "back": "scene24",
+        "left": "scene45",
+        "right": "",
+        "manual": true,
+        "hotspots": [
+            {
+                "pitch": -6.265228929916303,
+                "yaw": -80.04507486368482,
+                "text": "MECHANICAL LAB"
+            }
+        ]
+    },
+    "scene26": {
+        "image": "scene26.jpg",
+        "forward": "",
+        "back": "scene25",
+        "left": "",
+        "right": "scene27",
+        "manual": true
+    },
+    "scene27": {
+        "image": "scene27.jpg",
+        "forward": "scene28",
+        "back": "scene26",
+        "left": "",
+        "right": "",
+        "manual": false,
+        "hotspots": [
+            {
+                "pitch": -8.725491965282387,
+                "yaw": 47.83557722863863,
+                "text": "EPL LAB"
+            }
+        ]
+    },
+    "scene28": {
+        "image": "scene28.jpg",
+        "forward": "scene29",
+        "back": "scene27",
+        "left": "",
+        "right": "scene32",
+        "manual": true
+    },
+    "scene29": {
+        "image": "scene29.jpg",
+        "forward": "scene30",
+        "back": "scene28",
+        "left": "",
+        "right": "",
+        "manual": false
+    },
+    "scene30": {
+        "image": "scene30.jpg",
+        "forward": "",
+        "back": "scene29",
+        "left": "",
+        "right": "scene31",
+        "manual": true
+    },
+    "scene31": {
+        "image": "scene31.jpg",
+        "forward": "scene32",
+        "back": "scene30",
+        "left": "",
+        "right": "",
+        "manual": false
+    },
+    "scene32": {
+        "image": "scene32.jpg",
+        "forward": "",
+        "back": "scene28",
+        "left": "scene33",
+        "right": "",
+        "manual": true
+    },
+    "scene33": {
+        "image": "scene33.jpg",
+        "forward": "scene34",
+        "back": "scene32",
+        "left": "scene39",
+        "right": "",
+        "manual": true
+    },
+    "scene34": {
+        "image": "scene34.jpg",
+        "forward": "",
+        "back": "scene33",
+        "left": "",
+        "right": "scene35",
+        "manual": true,
+        "hotspots": [
+            {
+                "pitch": -8.612684690722201,
+                "yaw": 101.84072084491174,
+                "text": "EG LAB"
+            }
+        ]
+    },
+    "scene35": {
+        "image": "scene35.jpg",
+        "forward": "",
+        "back": "scene34",
+        "left": "",
+        "right": "scene36",
+        "manual": true
+    },
+    "scene36": {
+        "image": "scene36.jpg",
+        "forward": "",
+        "back": "scene35",
+        "left": "scene37",
+        "right": "",
+        "manual": true
+    },
+    "scene37": {
+        "image": "scene37.jpg",
+        "forward": "scene38",
+        "back": "scene36",
+        "left": "",
+        "right": "",
+        "manual": false
+    },
+    "scene38": {
+        "image": "scene38.jpg",
+        "forward": "",
+        "back": "scene37",
+        "left": "",
+        "right": "",
+        "manual": true
+    },
+    "scene39": {
+        "image": "scene39.jpg",
+        "forward": "",
+        "back": "scene33",
+        "left": "scene40",
+        "right": "",
+        "manual": true
+    },
+    "scene40": {
+        "image": "scene40.jpg",
+        "forward": "scene41",
+        "back": "scene39",
+        "left": "",
+        "right": "",
+        "manual": false
+    },
+    "scene41": {
+        "image": "scene41.jpg",
+        "forward": "scene42",
+        "back": "scene40",
+        "left": "",
+        "right": "scene43",
+        "manual": true,
+        "hotspots": [
+            {
+                "pitch": -7.548197440384183,
+                "yaw": 77.30737170777284,
+                "text": "EG LAB"
+            }
+        ]
+    },
+    "scene42": {
+        "image": "scene42.jpg",
+        "forward": "",
+        "back": "scene41",
+        "left": "",
+        "right": "",
+        "manual": true
+    },
+    "scene43": {
+        "image": "scene43.jpg",
+        "forward": "scene44",
+        "back": "scene42",
+        "left": "",
+        "right": "",
+        "manual": false
+    },
+    "scene44": {
+        "image": "scene44.jpg",
+        "forward": "scene45",
+        "back": "scene43",
+        "left": "",
+        "right": "",
+        "manual": false
+    },
+    "scene45": {
+        "image": "scene45.jpg",
+        "forward": "scene46",
+        "back": "scene25",
+        "left": "",
+        "right": "",
+        "manual": true
+    },
+    "scene46": {
+        "image": "scene46.jpg",
+        "forward": "scene47",
+        "back": "scene45",
+        "left": "",
+        "right": "",
+        "manual": false
+    },
+    "scene47": {
+        "image": "scene47.jpg",
+        "forward": "",
+        "back": "scene46",
+        "left": "",
+        "right": "scene48",
+        "manual": true
+    },
+    "scene48": {
+        "image": "scene48.jpg",
+        "forward": "scene49",
+        "back": "scene47",
+        "left": "",
+        "right": "",
+        "manual": false
+    },
+    "scene49": {
+        "image": "scene49.jpg",
+        "forward": "scene50",
+        "back": "scene11",
+        "left": "",
+        "right": "",
+        "manual": true
+    },
+    "scene50": {
+        "image": "scene50.jpg",
+        "forward": "scene51",
+        "back": "scene49",
+        "left": "",
+        "right": "",
+        "manual": false
+    },
+    "scene51": {
+        "image": "scene51.jpg",
+        "forward": "scene52",
+        "back": "scene53",
+        "left": "",
+        "right": "scene50",
+        "manual": true
+    },
+    "scene52": {
+        "image": "scene52.jpg",
+        "forward": "",
+        "back": "scene51",
+        "left": "",
+        "right": "",
+        "manual": true
+    },
+    "scene53": {
+        "image": "scene53.jpg",
+        "forward": "scene53",
+        "back": "scene54",
+        "left": "",
+        "right": "",
+        "manual": true
+    },
+    "scene54": {
+        "image": "scene54.jpg",
+        "forward": "",
+        "back": "scene53",
+        "left": "scene55",
+        "right": "",
+        "manual": true
+    },
+    "scene55": {
+        "image": "scene55.jpg",
+        "forward": "",
+        "back": "",
+        "left": "scene56",
+        "right": "",
+        "manual": true
+    },
+    "scene56": {
+        "image": "scene56.jpg",
+        "forward": "scene57",
+        "back": "scene55",
+        "left": "",
+        "right": "",
+        "manual": false
+    },
+    "scene57": {
+        "image": "scene57.jpg",
+        "forward": "scene58",
+        "back": "scene56",
+        "left": "",
+        "right": "",
+        "manual": false
+    },
+    "scene58": {
+        "image": "scene58.jpg",
+        "forward": "scene59",
+        "back": "scene57",
+        "left": "",
+        "right": "",
+        "manual": false
+    },
+    "scene59": {
+        "image": "scene59.jpg",
+        "forward": "scene60",
+        "back": "scene58",
+        "left": "",
+        "right": "",
+        "manual": false
+    },
+    "scene60": {
+        "image": "scene60.jpg",
+        "forward": "scene61",
+        "back": "scene59",
+        "left": "",
+        "right": "",
+        "manual": false
+    },
+    "scene61": {
+        "image": "scene61.jpg",
+        "forward": "scene62",
+        "back": "scene60",
+        "left": "",
+        "right": "",
+        "manual": false
+    },
+    "scene62": {
+        "image": "scene62.jpg",
+        "forward": "scene63",
+        "back": "scene61",
+        "left": "",
+        "right": "",
+        "manual": false
+    },
+    "scene63": {
+        "image": "scene63.jpg",
+        "forward": "",
+        "back": "scene62",
+        "left": "scene64",
+        "right": "",
+        "manual": true
+    },
+    "scene64": {
+        "image": "scene64.jpg",
+        "forward": "scene65",
+        "back": "scene63",
+        "left": "",
+        "right": "",
+        "manual": false
+    },
+    "scene65": {
+        "image": "scene65.jpg",
+        "forward": "",
+        "back": "scene64",
+        "left": "",
+        "right": "scene66",
+        "manual": true
+    },
+    "scene66": {
+        "image": "scene66.jpg",
+        "forward": "scene67",
+        "back": "scene65",
+        "left": "",
+        "right": "",
+        "manual": false
+    },
+    "scene67": {
+        "image": "scene67.jpg",
+        "forward": "",
+        "back": "scene66",
+        "left": "scene68",
+        "right": "",
+        "manual": true
+    },
+    "scene68": {
+        "image": "scene68.jpg",
+        "forward": "",
+        "back": "scene67",
+        "left": "scene69",
+        "right": "",
+        "manual": true
+    },
+    "scene69": {
+        "image": "scene69.jpg",
+        "forward": "scene70",
+        "back": "scene68",
+        "left": "",
+        "right": "",
+        "manual": false
+    },
+    "scene70": {
+        "image": "scene70.jpg",
+        "forward": "",
+        "back": "scene69",
+        "left": "",
+        "right": "",
+        "manual": true
+    },
+    "scene71": {
+        "image": "scene71.jpg",
+        "forward": "",
+        "back": "scene21",
+        "left": "",
+        "right": "scene72",
+        "manual": true
+    },
+    "scene72": {
+        "image": "scene72.jpg",
+        "forward": "",
+        "back": "scene71",
+        "left": "scene73",
+        "right": "",
+        "manual": true
+    },
+    "scene73": {
+        "image": "scene73.jpg",
+        "forward": "scene74",
+        "back": "scene72",
+        "left": "",
+        "right": "",
+        "manual": true,
+        "hotspots": [
+            {
+                "pitch": 3.3880104083917093,
+                "yaw": -117.78038556235904,
+                "text": "FIRST YEAR HOD CABIN"
+            }
+        ]
+    },
+    "scene74": {
+        "image": "scene74.jpg",
+        "forward": "",
+        "back": "scene73",
+        "left": "scene75",
+        "right": "",
+        "manual": true,
+        "hotspots": [
+            {
+                "pitch": -3.7714418120253024,
+                "yaw": -164.9786744099029,
+                "text": "UG LAB"
+            }
+        ]
+    },
+    "scene75": {
+        "image": "scene75.jpg",
+        "forward": "scene76",
+        "back": "scene74",
+        "left": "",
+        "right": "",
+        "manual": true,
+        "hotspots": [
+            {
+                "pitch": -0.9288242741800347,
+                "yaw": -56.9004222878889,
+                "text": "UG LAB"
+            }
+        ]
+    },
+    "scene76": {
+        "image": "scene76.jpg",
+        "forward": "",
+        "back": "scene75",
+        "left": "",
+        "right": "",
+        "manual": true
+    },
+    "scene77": {
+        "image": "scene77.jpg",
+        "forward": "",
+        "back": "scene22",
+        "left": "",
+        "right": "",
+        "manual": true
+    },
+    "scene78": {
+        "image": "scene78.jpg",
+        "forward": "scene17",
+        "back": "scene79",
+        "left": "",
+        "right": "",
+        "manual": true
+    },
+    "scene79": {
+        "image": "scene79.jpg",
+        "forward": "scene80",
+        "back": "scene78",
+        "left": "",
+        "right": "",
+        "manual": false
+    },
+    "scene80": {
+        "image": "scene80.jpg",
+        "forward": "scene81",
+        "back": "",
+        "left": "scene82",
+        "right": "",
+        "manual": true
+    },
+    "scene81": {
+        "image": "scene81.jpg",
+        "forward": "",
+        "back": "scene80",
+        "left": "",
+        "right": "",
+        "manual": true
+    },
+    "scene82": {
+        "image": "scene82.jpg",
+        "forward": "",
+        "back": "scene80",
+        "left": "",
+        "right": "scene83",
+        "manual": true
+    },
+    "scene83": {
+        "image": "scene83.jpg",
+        "forward": "",
+        "back": "scene82",
+        "left": "",
+        "right": "",
+        "manual": true
+    },
+    "scene84": {
+        "image": "scene84.jpg",
+        "forward": "",
+        "back": "",
+        "left": "",
+        "right": "scene85",
+        "manual": true
+    },
+    "scene85": {
+        "image": "scene85.jpg",
+        "forward": "",
+        "back": "scene84",
+        "left": "",
+        "right": "",
+        "manual": false
+    }
+}

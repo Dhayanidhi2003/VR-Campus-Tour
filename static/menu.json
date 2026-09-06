@@ -1,0 +1,38 @@
+{
+    "Library": {
+        "Common library": "scene18"
+    },
+    "Block 1": {
+        "Ground Floor": "scene21",
+        "First floor": "scene72"
+    },
+    "Block 2": {
+        "Admin office": "scene12"
+    },
+    "Block 3": {
+        "Ground floor": "scene14",
+        "First floor": "scene78"
+    },
+    "Block 4": {
+        "Ground floor": "scene24",
+        "First floor": "scene27",
+        "Second floor": "scene33",
+        "Third floor": "scene40"
+    },
+    "Canteen": {
+        "canteen": "scene52"
+    },
+    "Block 5": {
+        "Ground floor ": "scene65"
+    },
+    "Labs ": {
+        "Chemical lab": "scene69",
+        "Ug lab ": "scene75",
+        "EPL ": "scene28",
+        "Mechanical lab": "scene45",
+        "Engineering graphics lab ": "scene43",
+        "PG anb CSE LAB": "scene80",
+        "IT lab": "scene84",
+        "AIDS LAB": "scene85"
+    }
+}
