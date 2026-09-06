@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Menu Manager</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* =========================
+GLOBAL (LIGHT PREMIUM)
+========================= */
+
+body{
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #f8fafc, #eef2f7);
+  margin:0;
+  color:#1e293b;
+}
+
+/* =========================
+CONTAINER
+========================= */
+
+.admin-container{
+  max-width:1150px;
+  margin:50px auto;
+  padding:20px;
+}
+
+/* =========================
+HEADER
+========================= */
+
+.admin-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:30px;
+}
+
+.admin-title{
+  font-size:30px;
+  font-weight:700;
+  color:#0f172a;
+}
+
+/* =========================
+BUTTON
+========================= */
+
+.back-btn{
+  padding:10px 20px;
+  border:none;
+  border-radius:12px;
+  background:#111827;
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.back-btn:hover{
+  background:#1f2937;
+}
+
+/* =========================
+CARD
+========================= */
+
+.admin-card{
+  background:white;
+  border-radius:18px;
+  padding:25px;
+  margin-bottom:25px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.06);
+  border:1px solid #e5e7eb;
+}
+
+/* =========================
+TITLE
+========================= */
+
+.card-title{
+  font-size:20px;
+  font-weight:600;
+  margin-bottom:15px;
+}
+
+/* =========================
+FORM
+========================= */
+
+.admin-form{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.admin-form input,
+.admin-form select{
+  padding:10px 14px;
+  border-radius:10px;
+  border:1px solid #e5e7eb;
+  background:#f9fafb;
+}
+
+/* =========================
+PRIMARY BUTTON
+========================= */
+
+.primary-btn{
+  padding:10px 18px;
+  border:none;
+  border-radius:10px;
+  background:linear-gradient(135deg,#6366f1,#4f46e5);
+  color:white;
+  cursor:pointer;
+}
+
+/* =========================
+BLOCK
+========================= */
+
+.block-section{
+  margin-top:20px;
+  padding:18px;
+  border-radius:14px;
+  background:#f9fafb;
+  border:1px solid #e5e7eb;
+}
+
+/* =========================
+BLOCK HEADER
+========================= */
+
+.block-title{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:15px;
+}
+
+.block-left{
+  font-size:18px;
+  font-weight:600;
+}
+
+.block-actions{
+  display:flex;
+  gap:8px;
+}
+
+/* =========================
+FLOOR LIST
+========================= */
+
+.floor-list{
+  list-style:none;
+  padding:0;
+}
+
+.floor-list li{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px;
+  border-radius:12px;
+  background:white;
+  border:1px solid #e5e7eb;
+  margin-bottom:10px;
+  transition:0.2s;
+}
+
+.floor-list li:hover{
+  transform:translateX(4px);
+  box-shadow:0 6px 15px rgba(0,0,0,0.05);
+}
+
+/* =========================
+LEFT SIDE
+========================= */
+
+.floor-left{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.floor-name{
+  font-weight:500;
+}
+
+.scene-tag{
+  background:#eef2ff;
+  color:#4338ca;
+  padding:4px 8px;
+  border-radius:8px;
+  font-size:12px;
+}
+
+
+.icon-btn{
+  width:34px;
+  height:34px;
+  border:none;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+/* scene change */
+.icon-btn:nth-child(1){
+  background:#ecfeff;
+  color:#0891b2;
+}
+
+.icon-btn:nth-child(1):hover{
+  background:#cffafe;
+}
+
+/* =========================
+ACTIONS
+========================= */
+
+.floor-actions{
+  display:flex;
+  gap:8px;
+}
+
+
+/* =========================
+INLINE SCENE DROPDOWN
+========================= */
+
+.scene-select{
+  padding:6px 10px;
+  border-radius:10px;
+  border:1px solid #e5e7eb;
+  background:#f8fafc;
+  font-size:13px;
+  cursor:pointer;
+  outline:none;
+  transition:0.25s;
+  font-weight:500;
+  color:#4338ca;
+}
+
+/* hover */
+.scene-select:hover{
+  border-color:#6366f1;
+  background:#eef2ff;
+}
+
+/* focus */
+.scene-select:focus{
+  border-color:#6366f1;
+  box-shadow:0 0 0 3px rgba(99,102,241,0.15);
+}
+
+/* optional: make it look like tag */
+.scene-select{
+  appearance:none;
+  background-image:url("data:image/svg+xml;utf8,<svg fill='%236366f1' height='20' viewBox='0 0 20 20' width='20'><path d='M5 7l5 5 5-5z'/></svg>");
+  background-repeat:no-repeat;
+  background-position:right 8px center;
+  background-size:14px;
+  padding-right:28px;
+}
+
+
+/* =========================
+ICON BUTTON
+========================= */
+
+.icon-btn{
+  width:34px;
+  height:34px;
+  border:none;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+/* edit */
+.edit-btn{
+  background:#eef2ff;
+  color:#4f46e5;
+}
+
+.edit-btn:hover{
+  background:#e0e7ff;
+}
+
+/* delete */
+.delete-btn{
+  background:#fee2e2;
+  color:#dc2626;
+}
+
+.delete-btn:hover{
+  background:#fecaca;
+}
+
+/* =========================
+INLINE INPUT
+========================= */
+
+.rename-input{
+  padding:6px 10px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  font-size:14px;
+  outline:none;
+}
+
+/* =========================
+SCENE DROPDOWN
+========================= */
+
+.scene-dropdown{
+  padding:8px 10px;
+  border-radius:10px;
+  border:1px solid #e5e7eb;
+  background:white;
+  font-size:13px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+  outline:none;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.scene-dropdown:hover{
+  border-color:#6366f1;
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+<div class="admin-container">
+
+<div class="admin-header">
+  <div class="admin-title">Menu Manager</div>
+
+  <a href="/">
+    <button class="back-btn">Back</button>
+  </a>
+</div>
+
+<!-- CREATE BLOCK -->
+<div class="admin-card">
+<div class="card-title">Create Block</div>
+
+<form action="/add-block" method="POST" class="admin-form">
+  <input name="block_name" placeholder="Block Name" required>
+  <button class="primary-btn">Add</button>
+</form>
+</div>
+
+<!-- ADD FLOOR -->
+<div class="admin-card">
+<div class="card-title">Add Floor</div>
+
+<form action="/add-floor" method="POST" class="admin-form">
+
+<select name="block" required>
+  {% for block in menu %}
+  <option value="{{ block }}">{{ block }}</option>
+  {% endfor %}
+</select>
+
+<input name="floor_name" placeholder="Floor Name" required>
+
+<select name="scene_id" required>
+  {% for sid in scenes %}
+  <option value="{{ sid }}">{{ sid }}</option>
+  {% endfor %}
+</select>
+
+<button class="primary-btn">Add</button>
+
+</form>
+</div>
+
+<!-- CURRENT MENU -->
+<div class="admin-card">
+<div class="card-title">Current Menu</div>
+
+{% for block, floors in menu.items() %}
+
+<div class="block-section">
+
+<div class="block-title">
+
+  <div class="block-left">{{ block }}</div>
+
+  <div class="block-actions">
+
+    <!-- Rename Block -->
+    <button class="icon-btn edit-btn" onclick="renameBlock(this, '{{ block }}')">
+      <i class="fa-solid fa-pen"></i>
+    </button>
+
+    <!-- Delete Block -->
+    <form action="/delete-block" method="POST">
+      <input type="hidden" name="block_name" value="{{ block }}">
+      <button class="icon-btn delete-btn">
+        <i class="fa-solid fa-trash"></i>
+      </button>
+    </form>
+
+  </div>
+
+</div>
+
+<ul class="floor-list">
+
+{% for floor, scene in floors.items() %}
+
+<li>
+
+<div class="floor-left">
+  <span class="floor-name">{{ floor }}</span>
+  <select class="scene-select"
+        onchange="updateScene('{{ block }}','{{ floor }}', this.value)">
+
+  {% for sid in scenes %}
+  <option value="{{ sid }}" {% if sid == scene %}selected{% endif %}>
+    {{ sid }}
+  </option>
+  {% endfor %}
+
+</select>
+</div>
+
+<div class="floor-actions">
+
+  <!-- Change Scene -->
+
+
+  <!-- Rename -->
+  <button class="icon-btn edit-btn" onclick="renameFloor(this, '{{ block }}', '{{ floor }}')">
+    <i class="fa-solid fa-pen"></i>
+  </button>
+
+  <!-- Delete -->
+  <form action="/delete-floor" method="POST">
+    <input type="hidden" name="block" value="{{ block }}">
+    <input type="hidden" name="floor" value="{{ floor }}">
+    <button class="icon-btn delete-btn">
+      <i class="fa-solid fa-trash"></i>
+    </button>
+  </form>
+
+</div>
+
+</li>
+
+{% endfor %}
+
+</ul>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+<script>
+
+/* =========================
+RENAME BLOCK
+========================= */
+
+function renameBlock(btn, oldName){
+
+  const newName = prompt("Rename block", oldName);
+  if(!newName) return;
+
+  fetch("/rename-block",{
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({old_name:oldName,new_name:newName})
+  }).then(()=>location.reload());
+}
+
+/* =========================
+RENAME FLOOR
+========================= */
+
+function renameFloor(btn, block, oldName){
+
+  const newName = prompt("Rename floor", oldName);
+  if(!newName) return;
+
+  fetch("/update-floor",{
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({
+      block:block,
+      old_floor:oldName,
+      new_floor:newName
+    })
+  }).then(()=>location.reload());
+}
+
+</script>
+
+<script>
+    const ALL_SCENES = {{ scenes|tojson }};
+</script>
+
+<script>
+
+function openSceneDropdown(btn, block, floor){
+
+  // remove existing dropdown
+  document.querySelectorAll(".scene-dropdown").forEach(el => el.remove());
+
+  const dropdown = document.createElement("select");
+  dropdown.className = "scene-dropdown";
+
+  // populate scenes
+  for(const sid in ALL_SCENES){
+    const option = document.createElement("option");
+    option.value = sid;
+    option.innerText = sid;
+    dropdown.appendChild(option);
+  }
+
+  // style position
+  dropdown.style.position = "absolute";
+  dropdown.style.zIndex = "1000";
+
+  const rect = btn.getBoundingClientRect();
+  dropdown.style.top = rect.bottom + "px";
+  dropdown.style.left = rect.left + "px";
+
+  document.body.appendChild(dropdown);
+
+  dropdown.focus();
+
+  // handle selection
+  dropdown.onchange = function(){
+
+    fetch("/update-floor",{
+      method:"POST",
+      headers:{
+        "Content-Type":"application/json"
+      },
+      body:JSON.stringify({
+        block:block,
+        old_floor:floor,
+        scene_id:this.value
+      })
+    })
+    .then(()=>location.reload());
+
+  };
+
+  // close on blur
+  dropdown.onblur = () => dropdown.remove();
+
+}
+
+</script>
+
+<script>
+
+function updateScene(block, floor, newScene){
+
+  fetch("/update-floor",{
+    method:"POST",
+    headers:{
+      "Content-Type":"application/json"
+    },
+    body:JSON.stringify({
+      block:block,
+      old_floor:floor,
+      scene_id:newScene
+    })
+  });
+
+}
+
+</script>
+
+
+<script>
+
+/* =========================
+CHANGE SCENE
+========================= */
+
+function changeScene(block, floor, currentScene){
+
+  const newScene = prompt("Enter new scene ID", currentScene);
+
+  if(!newScene) return;
+
+  fetch("/update-floor",{
+    method:"POST",
+    headers:{
+      "Content-Type":"application/json"
+    },
+    body:JSON.stringify({
+      block:block,
+      old_floor:floor,
+      scene_id:newScene
+    })
+  })
+  .then(()=>location.reload());
+
+}
+
+</script>
+</body>
+</html>
